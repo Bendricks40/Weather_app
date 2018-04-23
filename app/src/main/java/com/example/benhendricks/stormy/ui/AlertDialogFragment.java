@@ -1,10 +1,12 @@
-package com.example.benhendricks.stormy;
+package com.example.benhendricks.stormy.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import com.example.benhendricks.stormy.R;
 
 /**
  * Created by ben.hendricks on 3/21/2018.

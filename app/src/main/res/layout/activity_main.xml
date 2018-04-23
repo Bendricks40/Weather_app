@@ -10,7 +10,7 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:paddingTop="15dp"
-    tools:context="com.example.benhendricks.stormy.MainActivity">
+    tools:context="com.example.benhendricks.stormy.ui.MainActivity">
 
     <TextView
         android:id="@+id/temperatureLabel"

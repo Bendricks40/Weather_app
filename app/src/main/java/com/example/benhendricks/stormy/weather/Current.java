@@ -1,19 +1,19 @@
-package com.example.benhendricks.stormy;
+package com.example.benhendricks.stormy.weather;
 
 import android.util.Log;
 
+import com.example.benhendricks.stormy.R;
+
 import java.text.SimpleDateFormat;
 import java.util.TimeZone;
-
-import static com.example.benhendricks.stormy.MainActivity.TAG;
 
 /**
  * Created by ben.hendricks on 3/25/2018.
  */
 
-public class CurrentWeather {
+public class Current {
 
-    public static final String TAG = CurrentWeather.class.getSimpleName();
+    public static final String TAG = Current.class.getSimpleName();
 
     private String mIcon;
     private long mTime;
