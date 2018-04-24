@@ -2,4 +2,7 @@
     <string name="app_name">Stormy</string>
     <string name="error_title">Oops! Sorry!</string>
     <string name="error_message">There was an error. Try again.</string>
+    <string name="title_activity_daily_forecast">DailyForecastActivity</string>
+    <string name="title_activity_daily_forecast_activity">Daily_forecast_activity</string>
+    <string name="no_daily_forecast_data">There is no data to display</string>
 </resources>
