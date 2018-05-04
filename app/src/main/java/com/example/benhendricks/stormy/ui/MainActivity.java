@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     private Forecast mForecast;
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final String DAILY_FORECAST = "DAILY_FORECAST";
+    public static final String HOURLY_FORECAST = "HOURLY_FORECAST";
+
 
     @BindView(R.id.timeLabel) TextView mTimeLabel;
     @BindView(R.id.temperatureLabel) TextView mTemperatureLabel;
@@ -247,6 +249,16 @@ else {
         //when navigating to the Daily forecast, we need to pass along the Forecast object to that view as well using a "put extra"
         intent.putExtra(DAILY_FORECAST, mForecast.getDailyForecast());
         startActivity(intent);
+    }
+
+
+    @OnClick (R.id.hourlyButton)
+    public void startHourlyActivity (View view) {
+
+        Intent intent = new Intent (this, HourlyForecastActivity.class);
+        intent.putExtra(HOURLY_FORECAST, mForecast.getHourlyForecast());
+        startActivity(intent);
+
     }
 
 }
