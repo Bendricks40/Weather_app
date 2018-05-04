@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Forecast mForecast;
     public static final String TAG = MainActivity.class.getSimpleName();
+    public static final String DAILY_FORECAST = "DAILY_FORECAST";
 
     @BindView(R.id.timeLabel) TextView mTimeLabel;
     @BindView(R.id.temperatureLabel) TextView mTemperatureLabel;
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(Call call, Response response) {
                 try {
                     String jsonData = response.body().string();
                     Log.v(TAG, jsonData);
@@ -243,6 +244,8 @@ else {
     @OnClick (R.id.dailyButton)
     public void startDailyActivity (View view) {
         Intent intent = new Intent(this, Daily_forecast_activity.class);
+        //when navigating to the Daily forecast, we need to pass along the Forecast object to that view as well using a "put extra"
+        intent.putExtra(DAILY_FORECAST, mForecast.getDailyForecast());
         startActivity(intent);
     }
 
